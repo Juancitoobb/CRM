@@ -18,7 +18,6 @@ namespace Crm.Maui.Persistence
 
             base.OnConfiguring(optionsBuilder);
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);

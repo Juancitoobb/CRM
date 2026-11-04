@@ -8,6 +8,7 @@
              Title="CRM"
              x:Name="Page">
 
+    
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel/>
     </ContentPage.BindingContext>
