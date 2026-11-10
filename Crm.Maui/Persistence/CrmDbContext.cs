@@ -26,21 +26,21 @@ namespace Crm.Maui.Persistence
                 new Customer
                 {
                     Id = 1,
-                    FirtName = "Burce",
+                    FirstName = "Burce",
                     LastName = "Wayne",
                     Email = "bruce.Wayne@mail.com"
                 },
                 new Customer
                 {
                     Id = 2,
-                    FirtName = "Peter",
+                    FirstName = "Peter",
                     LastName = "Parker",
                     Email = "peter.parker@mail.com"
                 },
                 new Customer
                 {
                     Id = 3,
-                    FirtName = "Tony",
+                    FirstName = "Tony",
                     LastName = "Stark",
                     Email = "tony.stark@mail.com"
                 }

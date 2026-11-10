@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Crm.Maui.Models;
 using Crm.Maui.Persistence;
+using Crm.Maui.Views;
 using Microsoft.Maui.Layouts;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,24 @@ namespace Crm.Maui.ViewsModels
         private void Showing()
         {
             Refreshing = true;
+        }
+
+        [RelayCommand]
+        private async Task ShowNewCustomerFormAsync()
+        {
+            await Shell.Current.GoToAsync(
+                nameof(CustomerEditPage),
+                parameters: new Dictionary<string, object>
+                {
+                    {"ParameterRefreshAction", (Func<Customer, Task>) RefresAddedAsync},
+                    {"Item", new Customer() },
+                });
+        }
+
+        private Task RefresAddedAsync(Customer addedCustomer)
+        {
+            Customers.Add(addedCustomer);
+            return Task.CompletedTask;
         }
     }
 }

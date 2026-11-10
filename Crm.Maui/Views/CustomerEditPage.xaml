@@ -1,12 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Crm.Maui.ViewsModels"
              x:Class="Crm.Maui.Views.CustomerEditPage"
-             Title="CustomerEditPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Nuevo Contacto">
+
+    <ContentPage.BindingContext>
+        <viewmodels:CustomerEditViewModel/>
+    </ContentPage.BindingContext>
+    
+    <Grid
+        Padding="16">
+
+        <VerticalStackLayout
+            VerticalOptions="Start">
+            
+            <Label
+                Text="Proporciones el nombre del contacto"/>
+            
+            <Entry
+                Text="{Binding Path=Cust.FirstName}"
+                Placeholder="P.je, John"
+                Margin="0,0,0,16"
+                BackgroundColor="WhiteSmoke"/>
+            
+            <Label
+                Text="Proporcione el apellido del contacto"/>
+            
+            <Entry
+                Text="{Binding Path=Cust.LastName}"
+                Placeholder="P.je, Dos"
+                Margin="0,0,0,16"
+                BackgroundColor="WhiteSmoke"/>
+            
+            <Label
+                Text="Proporcione el correo electronico del contacto"/>
+            
+            <Entry
+                Text="{Binding Path=Cust.Email}"
+                Placeholder="P. je, jdoc@example.com"
+                Margin="0,0,0,32"
+                BackgroundColor="WhiteSmoke"/>
+
+            <Button
+                Text="Guardar"
+                Command="{Binding Path=SaveCommand}"/>
+            
+        </VerticalStackLayout>
+        
+    </Grid>
+    
 </ContentPage>

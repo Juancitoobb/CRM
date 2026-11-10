@@ -56,6 +56,7 @@
 
         <Button
             Text="+"
+            Command="{Binding Path=ShowNewCustomerFormCommand}"
             WidthRequest="56"
             HeightRequest="56"
             FontSize="24"
