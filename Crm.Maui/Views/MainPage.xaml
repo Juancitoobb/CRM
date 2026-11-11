@@ -29,7 +29,7 @@
             <CollectionView
                 ItemsSource="{Binding Path=Customers}"
                 EmptyView="Aún no se han registrado clientes"
-                BackgroundColor="Beige">
+                BackgroundColor="Black">
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate
@@ -40,7 +40,7 @@
                             Padding="8">
                             <Label
                                 Grid.Row="0"
-                                Text="{Binding Path=FirtName}"/>
+                                Text="{Binding Path=FullName}"/>
                             <Label
                                 Grid.Row="1"
                                 Text="{Binding Path=Email}"

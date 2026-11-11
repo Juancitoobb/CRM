@@ -26,11 +26,11 @@ namespace Crm.Maui.ViewsModels
                 () =>
                 {
                     using CrmDbContext dbContext = new CrmDbContext();
-
                     Customers = new ObservableCollection<Customer>(dbContext.Customers);
+
                     Refreshing = false;
                 }
-                );
+);
         }
 
         [RelayCommand]

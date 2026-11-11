@@ -22,7 +22,7 @@
                 Text="{Binding Path=Cust.FirstName}"
                 Placeholder="P.je, John"
                 Margin="0,0,0,16"
-                BackgroundColor="WhiteSmoke"/>
+                BackgroundColor="Black"/>
             
             <Label
                 Text="Proporcione el apellido del contacto"/>
@@ -31,7 +31,7 @@
                 Text="{Binding Path=Cust.LastName}"
                 Placeholder="P.je, Dos"
                 Margin="0,0,0,16"
-                BackgroundColor="WhiteSmoke"/>
+                BackgroundColor="Black"/>
             
             <Label
                 Text="Proporcione el correo electronico del contacto"/>
@@ -40,7 +40,7 @@
                 Text="{Binding Path=Cust.Email}"
                 Placeholder="P. je, jdoc@example.com"
                 Margin="0,0,0,32"
-                BackgroundColor="WhiteSmoke"/>
+                BackgroundColor="Black"/>
 
             <Button
                 Text="Guardar"
